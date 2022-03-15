@@ -10,4 +10,6 @@ if (score == 80) {
 	result = "You did not pass. Try again!";
 }
 
-System.out.println(result);
+System.out.println(result);"You passed!"
+
+This code is stating the message recieved based on the result with the exam. If participant scores an 80 they get a "You passed!" message. If participant scores greater than an 80 then they receive a "You did great!" message. However, if the participants scores below an 80 they receive a "You did not pass. Try again!" message. 
