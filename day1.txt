@@ -1,15 +1,15 @@
-int score = 80;
+int score = 80; // defines the score as an integer 
 
 String result;
 
-if (score == 80) {
+if (score == 80) { // if value is equal to 80 proceed
 	result = "You passed!";
-} else if (score > 80) {
+} else if (score > 80) { // if value was not 80 and greater than 
 	result = "You did great!";
-} else {
+} else { // if value is below 80
 	result = "You did not pass. Try again!";
 }
 
-System.out.println(result);"You passed!"
+System.out.println(result); // "You passed!"
 
 This code is stating the message recieved based on the result with the exam. If participant scores an 80 they get a "You passed!" message. If participant scores greater than an 80 then they receive a "You did great!" message. However, if the participants scores below an 80 they receive a "You did not pass. Try again!" message. 
