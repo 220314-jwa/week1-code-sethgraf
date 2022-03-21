@@ -1,52 +1,54 @@
-public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+public static void main(String[] args) {   // states the access modifier as public and begins main method  
+	String[] foodTypes = getFoodTypes(); // defines variable
+	String myType = foodTypes[2]; // defines variable 
 
-	String[] foodsOfMyType = getFoodsByType(myType);
+	String[] foodsOfMyType = getFoodsByType(myType); // defines variable
 	
-	for (String food : foodsOfMyType) {
-		System.out.println(food);
-	}
-}
+	for (String food : foodsOfMyType) { //this tells us it is a for loop
+		System.out.println(food); // system prints out result 
+	} // end for loop
+} //end main method
 
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
-}
+public static String[] getFoodTypes() { // defines String
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"}; // string array literal with dimensions 
+	return foodTypes; // the foodTypes is returned to method that calls getFoodTypes
+} // end public static String 
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
+public static String[] getFoodsByType(String type) { // defines the String
+	String[] foods = new String[3]; // defines variable
 
-	switch(type) {
-	case "breakfast":
-		foods[0] = "pancakes";
-		foods[1] = "cereal";
-		foods[2] = "omelette";
-		break;
-	case "lunch":
-		foods[0] = "sandwich";
-		foods[1] = "salad";
-		foods[2] = "soup";
-		break;
-	case "dinner":
-		foods[0] = "curry";
-		foods[1] = "stir fry";
-		foods[2] = "burger";
-		break;
-	case "dessert":
-		foods[0] = "cake";
-		foods[1] = "ice cream";
-		foods[2] = "candy";
-		break;
-	case "snack":
-		foods[0] = "chips";
-		foods[1] = "apple";
-		foods[2] = "samosa";
-		break;
+	switch(type) { //switch statement which executes one statement from multiple conditions.
+	case "breakfast": // case value of testexpression
+		foods[0] = "pancakes"; // testing a single variable against a series of exact string values
+		foods[1] = "cereal"; // testing a single variable against a series of exact string values
+		foods[2] = "omelette"; // testing a single variable against a series of exact string values
+		break; //line break terminates switch
+	case "lunch": // value of testexpression
+		foods[0] = "sandwich"; // testing a single variable against a series of exact string values
+		foods[1] = "salad"; // testing a single variable against a series of exact string values
+		foods[2] = "soup"; // testing a single variable against a series of exact string values
+		break; //line break terminates switch
+	case "dinner": // value of testexpression
+		foods[0] = "curry";// testing a single variable against a series of exact string values
+		foods[1] = "stir fry"; // testing a single variable against a series of exact string values
+		foods[2] = "burger"; // testing a single variable against a series of exact string values
+		break; //line break terminates switch
+	case "dessert": // value of testexpression
+		foods[0] = "cake";// testing a single variable against a series of exact string values
+		foods[1] = "ice cream";// testing a single variable against a series of exact string values
+		foods[2] = "candy";// testing a single variable against a series of exact string values
+		break; //line break terminates switch
+	case "snack": // value of testexpression
+		foods[0] = "chips";// testing a single variable against a series of exact string values
+		foods[1] = "apple";// testing a single variable against a series of exact string values
+		foods[2] = "samosa";// testing a single variable against a series of exact string values
+		break; //line break ends final switch statement 
 	default:
 		// add your own
-		break;
-	}
+		break; //line break
+	} //end of switch structure
 
-	return foods;
-}
+	return foods; //return value stored in foods is sent back to the method getFoodsByType
+} //end public static String [] getFoodsByType (String type)
+
+//A summary of this code is, This is a switch statement which tests a single string (getFoodTypes) against a series of exact strings. (would like more help with these if possible!) 

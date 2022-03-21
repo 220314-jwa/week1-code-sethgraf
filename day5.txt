@@ -1,25 +1,25 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
-		</form>
-	</body>
-</html>
+<html> http/javalin local server local request
+	<head> // begin head statement
+		<title>Daily Code Review</title> //defines the documents title
+	</head> // end of head statement
+	<body> // body begining 
+		<h1>Cook your food!</h1> // represents the title of the document
+		<form action="http://localhost:8080/cook"> // action attribute specifies where to send the form data when a form is submitted
+			<label for="foodName">Food Name:</label> // caption for a specified element
+			<input id="foodName" name="foodName" type="text"> // input element is nested for input call
+			<br> // line break
+			<button type="submit">Submit</button> // button type is submit and will send response/food name input to server
+		</form> //end form
+	</body> // end body
+</html> // end html
 
-public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
+public static void main(String[] args) { //main method
+	Javalin app = Javalin.create(); // calling Javalin
+	app.start(); // starts Javalin server
 
-	app.get("cook", ctx -> {
-		String foodSent = ctx.formParam("foodName");
-		String cookedFood = "cooked " + foodSent;
-		ctx.result("Here's your food! <br>" + cookedFood);
-	});
-}
+	app.get("cook", ctx -> { // HTTP handler
+		String foodSent = ctx.formParam("foodName"); // ctx.formParam input is collected from HTTPserverlet
+		String cookedFood = "cooked " + foodSent; //defines variable
+		ctx.result("Here's your food! <br>" + cookedFood); // contex response - println, line break and variable
+	}); // end app.get
+} //end main method

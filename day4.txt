@@ -1,12 +1,14 @@
-public class Main {
-	public static void main(String[] args) {
-		Javalin app = Javalin.create();
+public class Main { // Main class header declares access modifier as public 
+	public static void main(String[] args) { // begins main method 
+		Javalin app = Javalin.create(); // starts Javalin program under .create
 
-		app.start();
+		app.start(); // starts Javalin server
 
-		app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
-			ctx.result("You got: " + myFood.name);
-		});
-	}
-}
+		app.get("foods", ctx -> { //ctx is abreviation for context which represents the instance
+			Food myFood = new Food("carrots", "vegetable"); // defines arguments
+			ctx.result("You got: " + myFood.name); // response method
+		}); // end app.get
+	} //end main method
+} //end public class Main
+
+//Summary of this code, This code is starting Javalin and running it with a basic http request. 

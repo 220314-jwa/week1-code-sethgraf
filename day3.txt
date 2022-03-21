@@ -1,24 +1,24 @@
-public class Food {
-	public String name;
-	public String type;
+public class Food { // class header Food, access modifier is defined as public
+	public String name; // define reference type
+	public String type; // define reference type
 
-	public Food(String name, String type) {
-		this.name = name;
-		this.type = type;
+	public Food(String name, String type) { // declares class with arguments
+		this.name = name; // defines variable
+		this.type = type; // defines variable
 	}
 
-	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
-		}
-	}
-}
+	public void cook() {  // there are no parameters passed to class
+		if (!name.contains("cooked")) { // only begin this if true
+			name = "cooked " + name; // if name equals the variable than add name
+		} // end public void cook
+	} // end public class Food
+} // code break
 
-public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
+public class Main { // class header Main
+	public static void main(String[] args) { // Main method
+		Food myFood = new Food("potato", "vegetable"); // defining the variable
+		myFood.cook(); // adds myFood to name variable
 
-		System.out.println(myFood.name);
-	}
-}
+		System.out.println(myFood.name); // print out result
+	}// end of Main method
+} // end of public class Main 
